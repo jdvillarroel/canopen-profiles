@@ -47,8 +47,8 @@ OD_ATTR_PERSIST_COMM OD_PERSIST_COMM_t OD_PERSIST_COMM = {
     },
     .x1800_TPDOCommunicationParameter = {
         .highestSub_indexSupported = 0x06,
-        .COB_IDUsedByTPDO = 0xC0000180,
-        .transmissionType = 0xFE,
+        .COB_IDUsedByTPDO = 0x40000180,
+        .transmissionType = 0x00,
         .inhibitTime = 0x0000,
         .eventTimer = 0x0000,
         .SYNCStartValue = 0x00
@@ -133,7 +133,7 @@ static CO_PROGMEM ODObjs_t ODObjs = {
     },
     .o_1005_COB_ID_SYNCMessage = {
         .dataOrig = &OD_PERSIST_COMM.x1005_COB_ID_SYNCMessage,
-        .attribute = ODA_SDO_RW | ODA_TRSRDO | ODA_MB,
+        .attribute = ODA_SDO_RW | ODA_TRPDO | ODA_TRSRDO | ODA_MB,
         .dataLength = 4
     },
     .o_1006_communicationCyclePeriod = {
